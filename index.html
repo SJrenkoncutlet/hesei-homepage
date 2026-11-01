@@ -1,0 +1,277 @@
+
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>★ 溜池chan's ﾎﾑﾍﾟ ★</title>
+
+<style>
+  body {
+    margin: 0;
+    background: #000000;
+    color: #ffffff;
+    font-family: "MS Gothic", "Hiragino Kaku Gothic ProN", sans-serif;
+    font-size: 13px;
+    line-height: 1.6;
+  }
+
+  /* ガラケー時代の細いページ */
+  .container {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+    padding: 8px;
+    box-sizing: border-box;
+  }
+
+  a {
+    color: #66ffff;
+    text-decoration: underline;
+  }
+
+  a:visited {
+    color: #ff99ff;
+  }
+
+  .title {
+    text-align: center;
+    color: #ff66cc;
+    font-size: 19px;
+    font-weight: bold;
+    text-shadow: 1px 1px #ff0000;
+  }
+
+  .rainbow {
+    color: #ffff00;
+    text-align: center;
+    font-weight: bold;
+  }
+
+  .marquee {
+    overflow: hidden;
+    white-space: nowrap;
+    color: #66ff66;
+    border-top: 1px dashed #ff66cc;
+    border-bottom: 1px dashed #ff66cc;
+    padding: 3px 0;
+  }
+
+  .marquee span {
+    display: inline-block;
+    padding-left: 100%;
+    animation: scroll 12s linear infinite;
+  }
+
+  @keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(-100%); }
+  }
+
+  .blink {
+    animation: blink 1s steps(2, start) infinite;
+  }
+
+  @keyframes blink {
+    to { visibility: hidden; }
+  }
+
+  .hr {
+    border: 0;
+    border-top: 1px dashed #ff66cc;
+    margin: 12px 0;
+  }
+
+  .menu a {
+    display: block;
+    background: #1b1022;
+    border: 1px solid #993399;
+    margin: 5px 0;
+    padding: 5px 8px;
+    font-weight: bold;
+  }
+
+  .section-title {
+    color: #ffff00;
+    background: #330033;
+    padding: 3px 5px;
+    border-left: 4px solid #ff66cc;
+    margin-bottom: 6px;
+  }
+
+  .counter {
+    text-align: center;
+    color: #66ff66;
+    letter-spacing: 2px;
+    font-family: monospace;
+    font-size: 18px;
+  }
+
+  .small {
+    font-size: 10px;
+    color: #aaaaaa;
+    text-align: center;
+  }
+
+  .center {
+    text-align: center;
+  }
+
+  .pink { color: #ff66cc; }
+  .yellow { color: #ffff00; }
+  .cyan { color: #66ffff; }
+
+  img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .fake-button {
+    color: #66ffff;
+    cursor: pointer;
+    text-decoration: underline;
+  }
+</style>
+</head>
+
+<body>
+<div class="container">
+
+  <header>
+    <div class="title">★ NANA'S ROOM ★</div>
+
+    <div class="marquee">
+      <span>☆★☆ ようこそ！来てくれてありが㌧♪ また来てね ☆★☆</span>
+    </div>
+
+    <p class="center pink">
+      キリ番踏めるかな？<br>
+      （≧▽≦）ﾉｼ
+    </p>
+
+    <div class="counter">000123 HIT</div>
+    <p class="center yellow">☆キリ番報告はBBSへ☆</p>
+  </header>
+
+  <hr class="hr">
+
+  <main>
+    <div class="center">
+      <span class="blink yellow">★☆★ WELCOME ★☆★</span>
+      <p class="pink">
+        ここは溜池ﾁｬﾝのお部屋です♪<br>
+        ごゆっくりどうぞ(*´▽｀*)
+      </p>
+      <p class="cyan">Since 2003.01.01</p>
+      <p>管理人：溜⭐︎池美(溜池山王)<br>
+      趣味：音楽・お笑い・お昼寝</p>
+    </div>
+
+    <hr class="hr">
+
+    <div class="section-title">▼ MENU ▼</div>
+
+    <nav class="menu">
+      <a href="#bbs">★ BBS（掲示板）</a>
+      <a href="#diary">★ 日記</a>
+      <a href="#real">★ リアルタイム</a>
+      <a href="#photo">★ 写真館</a>
+      <a href="#link">★ リンク集</a>
+    </nav>
+
+    <p class="center pink">
+      ※ 初めての人はBBSに<br>
+      カキコしてね（・∀・）！
+    </p>
+
+    <hr class="hr">
+
+    <section id="bbs">
+      <div class="section-title">★ BBS ★</div>
+      <p>足跡残していってね♪</p>
+      <p class="cyan">▼ 最新のカキコ ▼</p>
+      <p>
+        10/31  ゆき<br>
+        はじめまして☆また来ます！
+      </p>
+      <p>
+        10/30  管理人<br>
+        書き込みありがとぉ(*´ω｀*)
+      </p>
+      <p class="small">
+        ※これはサンプルの投稿です
+      </p>
+      <p class="center">
+        <a href="mailto:">管理人にメール</a>
+      </p>
+    </section>
+
+    <hr class="hr">
+
+    <section id="diary">
+      <div class="section-title">★ DIARY ★</div>
+      <p class="yellow">2026/10/31 (土)</p>
+      <p>
+        今日はベースを練習したょ♪<br>
+        もっと上手くなりたいなぁ…！<br>
+        がんばるぞー（｀・ω・´）
+      </p>
+      <p class="small">→ 日記は随時更新中☆</p>
+    </section>
+
+    <hr class="hr">
+
+    <section id="real">
+      <div class="section-title">★ REAL ★</div>
+      <p class="pink">管理人のリアルタイム日記</p>
+      <p>
+        22:00　洗い物中♪<br>
+        20:30　ごはん食べた！<br>
+        18:00　ただいま～☆
+      </p>
+      <p class="small">※更新内容はサンプルです</p>
+    </section>
+
+    <hr class="hr">
+
+    <section id="photo">
+      <div class="section-title">★ PHOTO ★</div>
+      <p>お気に入りの写真たち☆</p>
+      <p class="center pink">
+        [ 写真を準備中… ]
+      </p>
+      <p class="center">
+        <span class="blink yellow">COMING SOON!!</span>
+      </p>
+    </section>
+
+    <hr class="hr">
+
+    <section id="link">
+      <div class="section-title">★ LINK ★</div>
+      <p>おともだち＆お気に入り</p>
+      <p>
+        <a href="https://www.google.com/">・検索サイト</a><br>
+        <a href="https://github.com/">・GitHub</a>
+      </p>
+      <p class="pink">相互リンク募集中♪</p>
+    </section>
+
+    <hr class="hr">
+
+    <div class="center">
+      <p class="yellow">☆★☆ THANK YOU ☆★☆</p>
+      <p>また遊びに来てね！</p>
+      <p class="pink">無断転載禁止☆</p>
+      <p class="small">
+        Copyright © 溜池'S ROOM
+      </p>
+      <a href="#top" onclick="window.scrollTo(0,0); return false;">
+        ▲ ページTOPへ
+      </a>
+    </div>
+
+  </main>
+</div>
+</body>
+</html>
