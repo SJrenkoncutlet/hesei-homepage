@@ -131,6 +131,51 @@
     cursor: pointer;
     text-decoration: underline;
   }
+
+  
+.counter {
+  margin: 15px 0;
+  padding: 10px;
+  text-align: center;
+  color: #ff1493;
+  background: #fff0f8;
+  border: 2px dotted #ff69b4;
+  font-size: 13px;
+}
+
+#hit-count {
+  font-size: 22px;
+  font-weight: bold;
+  color: #ff1493;
+}
+
+#kiri-message {
+  font-weight: bold;
+  animation: blink 1s infinite;
+}
+
+.omikuji {
+  margin: 15px 0;
+  padding: 12px;
+  text-align: center;
+  color: #ff1493;
+  background: #fff8fc;
+  border: 2px dashed #ff69b4;
+}
+
+.omikuji button {
+  padding: 8px 12px;
+  color: white;
+  background: #ff69b4;
+  border: 2px outset #ffb6d9;
+  cursor: pointer;
+}
+
+#omikuji-result {
+  font-weight: bold;
+  font-size: 16px;
+}
+
 </style>
 </head>
 
@@ -149,7 +194,22 @@
       （≧▽≦）ﾉｼ
     </p>
 
-    <div class="counter">000123 HIT</div>
+    
+<div class="counter">
+  あなたは
+  <span id="hit-count">000001</span>
+  人目のお客様です☆
+  <p id="kiri-message">キリ番踏み逃げ禁止！！</p>
+</div>
+
+    
+<div class="omikuji">
+  <h3>★☆ 今日の運勢 ☆★</h3>
+  <p id="omikuji-result">運勢を占ってみてね♪</p>
+  <button onclick="drawOmikuji()">おみくじを引く！</button>
+</div>
+
+
     <p class="center yellow">☆キリ番報告はBBSへ☆</p>
   </header>
 
@@ -177,7 +237,7 @@
       <a href="#diary">★ 日記</a>
       <a href="#real">★ リアルタイム</a>
       <a href="#photo">★ 写真館</a>
-      <a href="#link">★ リンク集</a>
+      <a href="#link">★ 同盟リンク集</a>
     </nav>
 
     <p class="center pink">
@@ -283,5 +343,45 @@
 
   </main>
 </div>
+  
+<script>
+// キリ番カウンター
+let count = Number(localStorage.getItem("hp-hit-count") || 0);
+count++;
+
+localStorage.setItem("hp-hit-count", count);
+
+document.getElementById("hit-count").textContent =
+  String(count).padStart(6, "0");
+
+// キリ番チェック
+const kiriNumbers = [100, 200, 300, 500, 777, 1000, 2000, 3000];
+const kiriMessage = document.getElementById("kiri-message");
+
+if (kiriNumbers.includes(count)) {
+  kiriMessage.textContent =
+    "★☆ キリ番 " + count + " HIT！！おめでとう！！ ☆★";
+} else {
+  kiriMessage.textContent = "キリ番踏み逃げ禁止！！";
+}
+
+// おみくじ
+function drawOmikuji() {
+  const fortunes = [
+    "大吉☆ 今日は最高の日！！",
+    "中吉♪ いいことがあるかも！",
+    "小吉☆ マイペースでいこう！",
+    "吉♪ 友達を大切にね！",
+    "末吉… あせらずゆっくり！",
+    "凶！？ 忘れ物に気をつけて！"
+  ];
+
+  const result =
+    fortunes[Math.floor(Math.random() * fortunes.length)];
+
+  document.getElementById("omikuji-result").textContent = result;
+}
+</script>
+
 </body>
 </html>
